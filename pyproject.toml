@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colormath"
+dynamic = ["version"]
+description = "Color math and conversion library."
+readme = "README.rst"
+authors = [
+    {name="Gregory Taylor", email="gtaylor@gc-taylor.com"},
+]
+license = "BSD-3-Clause"
+license-files = ["LICENSE.txt"]
+requires-python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+dependencies = [
+    "numpy",
+    "networkx>=2.0",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+keywords = ["color", "math", "conversions"]
+
+[project.urls]
+Homepage = "https://github.com/gtaylor/python-colormath"
+Download = "http://pypi.python.org/pypi/colormath/"
+
+[project.optional-dependencies]
+development = [
+    "black",
+    "flake8",
+    "nose",
+    "pre-commit",
+    "sphinx"
+]
+
+[tool.setuptools]
+packages = ["colormath"]
+
+[tool.setuptools.dynamic]
+version = {attr="colormath.VERSION"}
